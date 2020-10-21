@@ -1,0 +1,22 @@
+.couleurs span {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    cursor: pointer;
+    border: solid 2px #cacaca;
+    transition: 0.3s ease ;
+    margin: 10px 5px;
+    border-radius: 10px;
+    &:hover {
+        border: 2px solid #666666;
+        box-shadow:  0px 0px 10px #b4b4b4;
+    }
+};
+
+.quantite input {
+    border: none;
+    outline: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    width: 20%;
+};

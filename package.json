@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --watch ./sass/main.scss:./css/styles.css"
+    "sass": "sass --watch ./sass/main.scss:./css/styles.css",
+    "build": "webpack",
+    "start": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
@@ -17,9 +19,19 @@
     "url": "https://github.com/RomainDMoostik/Orinoco-/issues"
   },
   "homepage": "https://github.com/RomainDMoostik/Orinoco-#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "babel-loader": "^8.1.0",
+    "babel-polyfill": "^6.26.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^4.1.0",
+    "webpack-dev-server": "^3.11.0"
+  },
   "dependencies": {
     "@popperjs/core": "^2.5.3",
     "bootstrap": "^4.5.3",
+    "bootstrap-icons": "^1.0.0",
     "jquery": "^3.5.1",
     "sass": "^1.27.0"
   }
