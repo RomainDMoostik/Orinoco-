@@ -27,14 +27,14 @@ async function renderTeddies() {
       html += htmlSegment;
   });
 
-  let container = document.querySelector('.container');
+  let container = document.querySelector('div.container > .my-4');
   container.innerHTML = html;
 }
 
 renderTeddies();
 
 
-
+/*
 function addCard(product) {
   const containerProduit = document.createElement("div");
   containerProduit.classList.add("container", "my-4");
@@ -76,7 +76,7 @@ function addCard(product) {
 
   containerProduit.textContent="<p>Test Container</>"; // product.description
 }
-
+*/
 
 
 //const rowProduit = document.querySelector(".container > .my-4");
