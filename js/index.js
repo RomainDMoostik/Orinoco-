@@ -13,7 +13,7 @@ async function renderTeddies() {
   teddies.forEach(teddiesId  => {
       let htmlSegment = `<div class="col-12 col-md-4 my-3 mx-auto">
                           <div class="card rounded-lg">
-                            <a href="produit.html" class="stretched-link">
+                            <a href="produit.html?id=${teddiesId._id}" class="stretched-link">
                               <img class="card-img-top" src="${teddiesId.imageUrl}" alt="image">
                             </a>
                             <div class="card-body">
@@ -32,7 +32,6 @@ async function renderTeddies() {
 }
 
 renderTeddies();
-
 
 /*
 function addCard(product) {
