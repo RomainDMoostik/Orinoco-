@@ -75,12 +75,15 @@ async function renderTeddy() {
                 <div class="card-title text-center h1">${teddy.name}</div>
                 <p class="card-text">${teddy.description}</p>
                 <div class="d-flex justify-content-center align-middle">
-                    <div class="couleurs">
-                        <span class="btn-primary"></span>
-                        <span class="btn-secondary"></span>
-                        <span class="btn-success"></span>
-                        <span class="btn-info"></span>
-                    </div>
+                    <form>
+                      <select name="couleur" size="1">
+                        <option>${teddy.colors[0]} 
+                        <option selected>${teddy.colors[1]}
+                        <option>${teddy.colors[2]}
+                        <option>${teddy.colors[3]}
+                      </select>
+                    </form>
+            
                     <div class="quantite ml-4">Quantité
                         <input type="number" min="1" max="10" step="1" value="1">
                     </div>
@@ -99,7 +102,7 @@ async function renderTeddy() {
     </div>`;
 
       html += htmlSegment;
-      let container = document.querySelector('div.container > .my-4');
+      let container = document.queryselector('div.container > .my-4');
       container.innerHTML = html;
   });
 }
