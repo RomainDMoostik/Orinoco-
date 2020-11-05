@@ -1,0 +1,19 @@
+th, .prix, .quantite {
+    font-weight: 700;
+}
+
+td.image img {
+    width: 250px;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate !important;
+    border-spacing: 0 25px;
+}
+
+td {
+    width: 150px;
+    border: 1px solid $info;
+}
+
