@@ -6,6 +6,7 @@ getTeddies().then (function (post) {
 })
 */
 
+
 async function renderTeddies() {
   let teddies = await getTeddies();
 
@@ -34,7 +35,7 @@ async function renderTeddies() {
 renderTeddies();
 
 /*
-function addCard(product) {
+function addToCard(product) {
   const containerProduit = document.createElement("div");
   containerProduit.classList.add("container", "my-4");
 

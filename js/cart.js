@@ -1,5 +1,78 @@
 console.log("cart");
 
+function addProductToCart(product) {
+  const cartString = localStorage.getItem("cart");
+  let cart = [];
+
+  if (cartString) {
+    cart = JSON.parse(cartString);
+  }
+
+  cart.push(product);
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+function getProductInCart() {
+  const cartString = localStorage.getItem("cart");
+
+  if (cartString) {
+    return JSON.parse(cartString);
+  }
+  return [];
+}
+
+
+class Produit {
+  contructor(name, image, price) {
+    this.name = name;
+    this.image = image;
+    this.price = price;
+  }
+
+  getPrice() {
+    return this.price * 100; 
+  }
+}
+
+class Cart {
+
+  constructor() {
+    this.products = [];
+    this.refreshProducts()
+  }
+
+  refreshProducts() {
+    const cartString = localStorage.getItem("cart");
+  
+    if (cartString) {
+      this.products = JSON.parse(cartString);
+    }
+    this.products = []
+  }
+
+  getProduct() {
+    this.refreshProducts()
+    return this.products;
+  }
+
+  addProduct(product) {
+  this.refreshProducts();
+    this.products.push(product);
+    localStorage.setItem("cart", JSON.stringify(this.products));
+  }
+}
+//
+const cart = new Cart();
+
+cart.addProduct(product);
+
+const products = cart.getProduct();
+
+
+
+
+
+
 let cart = {
     // (A) PROPERTIES
     // (A1) HTML ELEMENTS
@@ -11,7 +84,7 @@ let cart = {
   
     // (A3) AVAILABLE PRODUCTS
     // PRODUCT ID => DATA
-    products : getTeddies, // liste des produits
+    products :  [], // liste des produits
 
 
     // (B) LOCALSTORAGE CART
